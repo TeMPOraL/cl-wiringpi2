@@ -4,4 +4,5 @@
   (:nicknames #:wpi2)
   (:use #:cl)
 
-  (:export #:setup))
+  (:export #:setup
+           #:pin-mode))

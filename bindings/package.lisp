@@ -6,7 +6,27 @@
         #:alexandria
         #:cffi)
 
-  (:export #:wiring-pi-setup
-           #:wiring-pi-setup-phys
-           #:wiring-pi-setup-gpio
-           #:wiring-pi-setup-sys))
+  (:export
+   ;; constants
+   #:+input+
+   #:+output+
+   #:+pwm-output+
+   #:+gpio-clock+
+
+   ;; functions
+   #:wiring-pi-setup
+   #:wiring-pi-setup-phys
+   #:wiring-pi-setup-gpio
+   #:wiring-pi-setup-sys
+
+   #:pin-mode
+   #:pull-up-dn-control
+
+   #:digital-read
+   #:digital-write
+   #:pwm-write
+   #:analog-read
+   #:analog-write
+
+   #:pi-board-rev
+   #:pi-board-id))
