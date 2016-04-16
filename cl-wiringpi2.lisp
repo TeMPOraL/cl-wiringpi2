@@ -23,12 +23,18 @@
 Note that all modes except :SYS require the program to be run with superuser privileges.
 Pin numeration under :SYS mode is the same as in :GPIO/:BROADCOM mode.
 
+You should call this function only once per execution of the program. For convenience,
+calling it again with the same `MODE' will be ignored; otherwise an error will be signalled.
+
 Set `TERMINATE-ON-ERROR' to `NIL' to restore the default behaviour of Wiring Pi 2 causing
 the process to terminate if setup function fails."
   (unless terminate-on-error
     (setenv "WIRINGPI_CODES" "TRUE"))
 
-  (prog1
+  (if (initializedp)
+      (unless (eql *setup-mode* mode)
+        (error "Wiring Pi 2 setup may be done only once per execution."))
+        (prog1
       (ccase mode
         (:wiring-pi
          (wpi2-ffi:wiring-pi-setup))
@@ -38,7 +44,7 @@ the process to terminate if setup function fails."
          (wpi2-ffi:wiring-pi-setup-gpio))
         (:sys
          (wpi2-ffi:wiring-pi-setup-sys)))
-    (setf *setup-mode* mode)))
+    (setf *setup-mode* mode))))
 
 (defun pin-mode (pin mode)
   "Try to set `PIN' to `MODE'.
