@@ -173,7 +173,11 @@ extern int wiringPiFailure (int fatal, const char *message, ...) ;
 (defun wrapped-pi-board-id ()
   (with-foreign-objects ((model :int) (rev :int) (mem :int) (maker :int) (overvolted :int))
     (pi-board-id model rev mem maker overvolted)
-    (mapcar #'mem-ref (list model rev mem maker overvolted))))
+    (list (mem-ref model :int)
+          (mem-ref rev :int)
+          (mem-ref mem :int)
+          (mem-ref maker :int)
+          (mem-ref overvolted :int))))
 
 (defcfun ("wpiPinToGpio" wpi-pin-to-gpio) :int (wpi-pin :int))
 (defcfun ("physPinToGpio" phys-pin-to-gpio) :int (phys-pin :int))
