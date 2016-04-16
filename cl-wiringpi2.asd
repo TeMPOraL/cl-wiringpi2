@@ -11,4 +11,5 @@
                         :components ((:file "package")
                                      (:file "wiringpi")))
                (:file "package")
+               (:file "utils")
                (:file "cl-wiringpi2")))
