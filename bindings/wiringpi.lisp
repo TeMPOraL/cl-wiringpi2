@@ -213,5 +213,5 @@ extern int piHiPri (const int pri) ;
 (defcfun ("delay" delay) :void (how-long :unsigned-int))
 (defcfun ("delayMicroseconds" delay-microseconds) :void (how-long :unsigned-int))
 
-(defcfun ("milis" milis) :unsigned-int)
+(defcfun ("millis" millis) :unsigned-int)
 (defcfun ("micros" micros) :unsigned-int)
