@@ -18,6 +18,7 @@
            #:analog-write
            #:pi-board-revision
            #:pi-board-info
+           #:pi-board-info*
            #:milliseconds
            #:microseconds
            #:delay
