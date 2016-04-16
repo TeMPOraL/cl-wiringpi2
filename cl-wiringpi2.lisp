@@ -34,17 +34,17 @@ the process to terminate if setup function fails."
   (if (initializedp)
       (unless (eql *setup-mode* mode)
         (error "Wiring Pi 2 setup may be done only once per execution."))
-        (prog1
-      (ccase mode
-        (:wiring-pi
-         (wpi2-ffi:wiring-pi-setup))
-        (:phys
-         (wpi2-ffi:wiring-pi-setup-phys))
-        ((:gpio :broadcom)
-         (wpi2-ffi:wiring-pi-setup-gpio))
-        (:sys
-         (wpi2-ffi:wiring-pi-setup-sys)))
-    (setf *setup-mode* mode))))
+      (prog1
+          (ccase mode
+            (:wiring-pi
+             (wpi2-ffi:wiring-pi-setup))
+            (:phys
+             (wpi2-ffi:wiring-pi-setup-phys))
+            ((:gpio :broadcom)
+             (wpi2-ffi:wiring-pi-setup-gpio))
+            (:sys
+             (wpi2-ffi:wiring-pi-setup-sys)))
+        (setf *setup-mode* mode))))
 
 (defun pin-mode (pin mode)
   "Try to set `PIN' to `MODE'.
