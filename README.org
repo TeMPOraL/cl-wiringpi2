@@ -65,4 +65,4 @@ Bug reports and pull requests always welcome :).
 
 * Credits
 
-I did take a quick peak at the [[https://github.com/jl2/wpi][bindings to Wiring Pi by Jeremiah LaRocco]].
+I did take a quick peek at the [[https://github.com/jl2/wpi][bindings to Wiring Pi by Jeremiah LaRocco]].
