@@ -7,5 +7,8 @@
   :depends-on (#:alexandria
                #:cffi)
   :serial t
-  :components ((:file "package")
+  :components ((:module "bindings"
+                        :components ((:file "package")
+                                     (:file "wiringpi")))
+               (:file "package")
                (:file "cl-wiringpi2")))
