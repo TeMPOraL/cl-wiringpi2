@@ -55,3 +55,74 @@ This function has no effect in :SYS mode."
                    (:PWM-OUTPUT wpi2-ffi:+pwm-output+)
                    (:GPIO-CLOCK wpi2-ffi:+gpio-clock+))))
     (wpi2-ffi:pin-mode pin mode-id)))
+
+(defun set-pull-resistor-mode (pin mode)
+  "Set the mode of pull-up / pull-down resistors on the `PIN'.
+Available modes are:
+  - :OFF - no pull up / down
+  - :PULL-UP - pull up (to 3.3V)
+  - :PULL-DOWN - pull down (pull to ground)
+
+`PIN' should be set to input."
+  (let ((pud (ccase mode
+               (:OFF wpi2-ffi:+pud-off+)
+               (:PULL-UP wpi2-ffi:+pud-up+)
+               (:PULL-DOWN wpi2-ffi:+pud-down+))))
+   (wpi2-ffi:pull-up-dn-control pin pud)))
+
+(defun digital-write (pin value)
+  "Write `VALUE' to `PIN'.
+Use constants `+LOW+' and `+HIGH+' for `VALUE'."
+  (wpi2-ffi:digital-write pin value))
+
+(defun pwm-write (pin value)
+  "Write `VALUE' to PWM register for the given `PIN'.
+The range for `VALUE' is 0-1024 for Raspberry Pi's on-board PWM pin (pin 1, BMC_GPIO 18, physical: 12)."
+  (wpi2-ffi:pwm-write pin value))
+
+(defun digital-read (pin)
+  "Read the state of `PIN'.
+Returns numeric value of the pin state; compare with constants `+LOW+' and `+HIGH+'."
+  (wpi2-ffi:digital-read pin))
+
+(defun analog-read (pin)
+  "Returns the value on the analog input `PIN'.
+Note, apparently there are no analog pins on the Raspberry Pi itself; read will return a dummy value there."
+  (wpi2-ffi:analog-read pin))
+
+(defun analog-write (pin value)
+  "Writes the given `VALUE' to the supplied analog `PIN'.
+Note, apparently there are no analog pins on the Raspberry Pi itself - the write will be non-effective there."
+  (wpi2-ffi:analog-write pin value))
+
+(defun pi-board-revision ()
+  "Returns the board version of the Raspberry Pi. It will be either 1 or 2.
+
+Revision 1 means early Model A and B's.
+Revision 2 is everything else - B, B+, CM, Pi 2, Pi Zero, Pi3.
+Some of the pins in Broadcom numeration change their numbers depending on the board revision."
+  (wpi2-ffi:pi-board-rev))
+
+(defun pi-board-info ()
+  "Returns the hardware information of Raspberry Pi board."
+  (wpi2-ffi:wrapped-pi-board-id))
+
+(defun milliseconds ()
+  "Returns the number of milliseconds since the call to setup function.
+Note that the number will wrap around after around 49 days."
+  (wpi2-ffi:millis))
+
+(defun microseconds ()
+  "Returns the number of microseconds since the call to setup function.
+Note that the number will wrap around after around 71 minutes."
+  (wpi2-ffi:micros))
+
+(defun delay (milliseconds)
+  "Pause the execution for at least `MILLISECONDS' milliseconds.
+Maximum delay is approximately 49 days."
+  (wpi2-ffi:delay milliseconds))
+
+(defun delay-microseconds (microseconds)
+  "Pause the execution for at least `MICROSECONDS' microseconds.
+Maximum delay is approximately 71 minutes."
+  (wpi2-ffi:delay-microseconds microseconds))

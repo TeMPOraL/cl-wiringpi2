@@ -13,6 +13,13 @@
    #:+pwm-output+
    #:+gpio-clock+
 
+   #:+low+
+   #:+high+
+
+   #:+pud-off+
+   #:+pud-down+
+   #:+pud-up+
+
    ;; functions
    #:wiring-pi-setup
    #:wiring-pi-setup-phys
@@ -29,4 +36,10 @@
    #:analog-write
 
    #:pi-board-rev
-   #:pi-board-id))
+   #:wrapped-pi-board-id
+
+   #:delay
+   #:delay-microseconds
+
+   #:millis
+   #:micros))
