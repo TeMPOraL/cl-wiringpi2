@@ -104,7 +104,46 @@ Some of the pins in Broadcom numeration change their numbers depending on the bo
   (wpi2-ffi:pi-board-rev))
 
 (defun pi-board-info ()
-  "Returns the hardware information of Raspberry Pi board."
+  "Returns the hardware information of Raspberry Pi board.
+Result is an plist with following keys:
+:MODEL - keyword describing the Raspberry Pi model
+:REVISION - number describing the Raspberry Pi revision (see `PI-BOARD-REVISION')
+:MEMORY - number of megabytes of RAM the board has
+:MAKER - keyword identifying the maker of the board
+:OVERVOLTED - `T' if the board was overclocked; `NIL' otherwise.
+
+Models: :A, :B, :B+, :CM, :ALPHA, :2, :3, :ZERO, :07, :UNKNOWN
+Makers: :SONY :EGOMAN :MBEST :UNKNOWN"
+  (destructuring-bind (model revision memory maker overvolted)
+      (pi-board-info*)
+    (let ((r-model (case model
+                     (wpi2-ffi:+pi-model-a+ :A)
+                     (wpi2-ffi:+pi-model-b+ :B)
+                     (wpi2-ffi:+pi-model-ap+ :A+)
+                     (wpi2-ffi:+pi-model-bp+ :B+)
+                     (wpi2-ffi:+pi-model-2+ :2)
+                     (wpi2-ffi:+pi-alpha+ :ALPHA)
+                     (wpi2-ffi:+pi-model-cm+ :CM)
+                     (wpi2-ffi:+pi-model-07+ :07)
+                     (wpi2-ffi:+pi-model-3+ :3)
+                     (wpi2-ffi:+pi-model-zero+ :ZERO)
+                     (otherwise :UNKNOWN)))
+          (r-memory (case memory
+                      (0 256)
+                      (1 512)
+                      (2 1024)
+                      (otherwise 0)))
+          (r-maker (case maker
+                     (wpi2-ffi:+pi-maker-sony+ :SONY)
+                     (wpi2-ffi:+pi-maker-egoman+ :EGOMAN)
+                     (wpi2-ffi:+pi-maker-mbest+ :MBEST)
+                     (otherwise :UNKNOWN)))
+          (r-overvolted (zerop overvolted)))
+      (list :model r-model :revision revision :memory r-memory :maker r-maker :overvolted r-overvolted))))
+
+(defun pi-board-info* ()
+  "Like `PI-BOARD-INFO', but gives the raw values returned from the Wiring Pi library.
+They are, in sequence: model id, revision id, memory, maker id, overvolted state."
   (wpi2-ffi:wrapped-pi-board-id))
 
 (defun milliseconds ()

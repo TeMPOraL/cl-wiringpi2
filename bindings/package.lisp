@@ -20,6 +20,22 @@
    #:+pud-down+
    #:+pud-up+
 
+   #:+pi-model-a+
+   #:+pi-model-b+
+   #:+pi-model-ap+
+   #:+pi-model-bp+
+   #:+pi-model-2+
+   #:+pi-alpha+
+   #:+pi-model-cm+
+   #:+pi-model-07+
+   #:+pi-model-3+
+   #:+pi-model-zero+
+
+   #:+pi-maker-sony+
+   #:+pi-maker-egoman+
+   #:+pi-maker-mbest+
+   #:+pi-maker-unknown+
+
    ;; functions
    #:wiring-pi-setup
    #:wiring-pi-setup-phys
