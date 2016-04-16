@@ -1,0 +1,3 @@
+#+title: CL-WIRINGPI2 - CFFI bindings to WiringPi 2.
+
+This is the stub README.org for the "cl-wiringpi2" project.
