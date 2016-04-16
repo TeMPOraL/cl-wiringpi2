@@ -1,3 +1,59 @@
 #+title: CL-WIRINGPI2 - CFFI bindings to WiringPi 2.
 
-This is the stub README.org for the "cl-wiringpi2" project.
+A set of lispified bindings to Wiring Pi 2.
+
+The project intention is to provide a Lisp-friendly version of Wiring Pi 2. That means
+the library's primary API does not correspond 1 to 1 with Wiring Pi 2. Changes have been made
+to make it follow the Lisp style of things.
+
+Note that the CFFI bindings themselves have been separated to another package; you can use them
+instead if you prefer the original flavour of the library.
+
+* Installation
+
+The simplest way is via QuickLisp. Clone the repo somewhere, and then symlink that folder
+in ~/quicklisp/local-projects/. Inside your Lisp run =(ql:register-local-projects)=.
+cl-wiringpi2 should now show on the list outputed by =(ql:list-local-projects)=.
+
+Then, just execute =(ql:quickload :cl-wiringpi2)= and you're good to go.
+
+Note that for most functions, Wiring Pi 2 requires to run with superuser privileges. It means
+your Lisp image will have to be started as such. For example, I run my CCL with:
+
+#+BEGIN_SRC sh
+  sudo -E /path/to/ccl/armcl
+#+END_SRC
+
+-E ensures that the environmental variables of your user are retained, so you don't have
+to set up separate init file and QuickLisp for the root user.
+
+* Status
+
+See the package.lisp file in the main folder for the list of exported symbols.
+Those are the functions that currently should work.
+
+At the moment the bindings are only to the main Wiring Pi 2 functions, i.e. those
+contained in the wiringPi.h header.
+
+* Documentation
+
+Currently the documentation is available in docstrings of functions in the source files.
+Consult the [[http://wiringpi.com/reference/][Wiring Pi 2 official documentation]]; most available functions match the originals by name
+(albeit a bit lispified).
+
+* Examples
+
+A simple blink example is available. More to come.
+
+* Testing
+
+The library hasn't been tested very much. The bindings are pretty straightforward though, so there shouldn't be surprises.
+Present API seems to work, but please report any issues.
+
+* Support
+
+Bug reports and pull requests always welcome :).
+
+* Credits
+
+I did take a quick peak at the [[https://github.com/jl2/wpi][bindings to Wiring Pi by Jeremiah LaRocco]].
