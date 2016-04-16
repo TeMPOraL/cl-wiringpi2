@@ -7,8 +7,9 @@ The project intention is to provide a Lisp-friendly version of Wiring Pi 2. That
 the library's primary API does not correspond 1 to 1 with Wiring Pi 2. Changes have been made
 to make it follow the Lisp style of things.
 
-Note that the [[https://common-lisp.net/project/cffi/][CFFI]] bindings themselves have been separated to another package; you can use them
-instead if you prefer the original flavour of the library.
+Note that the [[https://common-lisp.net/project/cffi/][CFFI]] bindings themselves have been separated to another
+package (cl-wiringpi2-ffi); you can use them instead if you prefer the
+original flavour of the library.
 
 * Installation
 
@@ -47,7 +48,7 @@ Consult the [[http://wiringpi.com/reference/][Wiring Pi 2 official documentation
 Examples are contained in cl-wiringpi2-examples system / package.
 A simple blink example is available. More to come.
 
-To run blink, connect the LED and a 330Ω resistor to the GPIO 0 (physical pin: 11),
+To run blink, connect an LED and a 330Ω resistor to the GPIO 0 (physical pin: 11),
 like on [[http://wiringpi.com/examples/blink/][this image]], and execute:
 #+BEGIN_SRC lisp
   (wpi2-examples:blink)
