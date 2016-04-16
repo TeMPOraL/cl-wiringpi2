@@ -29,7 +29,7 @@ the process to terminate if setup function fails."
     (setenv "WIRINGPI_CODES" "TRUE"))
 
   (prog1
-      (ecase mode
+      (ccase mode
         (:wiring-pi
          (wpi2-ffi:wiring-pi-setup))
         (:phys
@@ -49,7 +49,7 @@ Available modes are:
   - :GPIO-CLOCK
 
 This function has no effect in :SYS mode."
-  (let ((mode-id (ecase mode
+  (let ((mode-id (ccase mode
                    (:INPUT wpi2-ffi:+input+)
                    (:OUTPUT wpi2-ffi:+output+)
                    (:PWM-OUTPUT wpi2-ffi:+pwm-output+)
