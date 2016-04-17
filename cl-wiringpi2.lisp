@@ -133,13 +133,14 @@ Some of the pins in Broadcom numeration change their numbers depending on the bo
 (defun pi-board-info ()
   "Returns the hardware information of Raspberry Pi board.
 Result is an plist with following keys:
-:MODEL - keyword describing the Raspberry Pi model
-:REVISION - number describing the Raspberry Pi revision (see `PI-BOARD-REVISION')
-:MEMORY - number of megabytes of RAM the board has
-:MAKER - keyword identifying the maker of the board
-:OVERVOLTED - `T' if the board was overclocked; `NIL' otherwise.
+  - :MODEL - keyword describing the Raspberry Pi model
+  - :REVISION - number describing the Raspberry Pi revision (see `PI-BOARD-REVISION')
+  - :MEMORY - number of megabytes of RAM the board has
+  - :MAKER - keyword identifying the maker of the board
+  - :OVERVOLTED - `T' if the board was overclocked; `NIL' otherwise.
 
 Models: :A, :B, :B+, :CM, :ALPHA, :2, :3, :ZERO, :07, :UNKNOWN
+
 Makers: :SONY :EGOMAN :MBEST :UNKNOWN"
   (destructuring-bind (model revision memory maker overvolted)
       (pi-board-info*)
