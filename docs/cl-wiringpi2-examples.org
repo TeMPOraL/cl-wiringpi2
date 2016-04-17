@@ -1,0 +1,81 @@
+#+TITLE: The CL-WIRINGPI2-EXAMPLES package
+#+AUTHOR: Jacek Złydach (via CLOD)
+#+EMAIL: temporal.pl@gmail.com
+#+LINK: hs http://www.lispworks.com/reference/HyperSpec//%s
+#+STARTUP: showall
+#+OPTIONS: toc:4 H:10 @:t tags:nil
+
+# link target 2: <<cl-wiringpi2-examples>>
+# link target: <<package cl-wiringpi2-examples>>
+
+
+* Internal Package: =cl-wiringpi2-examples=                              :package:
+
+- Uses:
+    [[package cl-wiringpi2][cl-wiringpi2]], [[package common-lisp][common-lisp]]
+- Used by:
+    None.
+
+** Description
+
+Not documented.
+
+
+** External Symbols
+
+
+
+
+*** External Functions
+
+-----
+
+# link target 2: <<blink>>
+# link target: <<function blink>>
+
+
+**** Function: =blink=                                                     :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(blink &optional (n 10))
+#+END_SRC
+
+
+***** Description
+
+Initialize the Wiring Pi library and blink a LED connected to pin 0 `N' times.
+
+
+
+
+
+
+** Internal Symbols
+
+
+
+
+
+** Index
+
+
+[[index B][B]]  
+
+
+*** B
+
+
+# link target: <<index B>>
+- [[function blink][=cl-wiringpi2-examples:blink=]], Function
+
+
+
+
+
+* Colophon
+
+This documentation was generated from Common Lisp source code using CLOD, version 1.0.
+The latest version of CLOD is available [[http://bitbucket.org/eeeickythump/clod/][here]].

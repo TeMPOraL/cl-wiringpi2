@@ -1,0 +1,2394 @@
+#+TITLE: The CL-WIRINGPI2-FFI package
+#+AUTHOR: Jacek Złydach (via CLOD)
+#+EMAIL: temporal.pl@gmail.com
+#+LINK: hs http://www.lispworks.com/reference/HyperSpec//%s
+#+STARTUP: showall
+#+OPTIONS: toc:4 H:10 @:t tags:nil
+
+# link target 2: <<cl-wiringpi2-ffi>>
+# link target: <<package cl-wiringpi2-ffi>>
+
+
+* Internal Package: =cl-wiringpi2-ffi=                                   :package:
+
+- Uses:
+    [[package cffi][cffi]], [[package alexandria.0.dev][alexandria.0.dev]],
+    [[package common-lisp][common-lisp]]
+- Used by:
+    None.
+
+** Description
+
+Not documented.
+
+
+** External Symbols
+
+
+
+
+*** External Constants
+
+-----
+
+# link target 2: <<..2b..alt-0..2b..>>
+# link target: <<constant ..2b..alt-0..2b..>>
+
+
+**** Constant: =+alt-0+=                                                   :constant:
+
+
+***** Value
+
+: 4
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..alt-1..2b..>>
+# link target: <<constant ..2b..alt-1..2b..>>
+
+
+**** Constant: =+alt-1+=                                                   :constant:
+
+
+***** Value
+
+: 5
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..alt-2..2b..>>
+# link target: <<constant ..2b..alt-2..2b..>>
+
+
+**** Constant: =+alt-2+=                                                   :constant:
+
+
+***** Value
+
+: 6
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..alt-3..2b..>>
+# link target: <<constant ..2b..alt-3..2b..>>
+
+
+**** Constant: =+alt-3+=                                                   :constant:
+
+
+***** Value
+
+: 7
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..alt-4..2b..>>
+# link target: <<constant ..2b..alt-4..2b..>>
+
+
+**** Constant: =+alt-4+=                                                   :constant:
+
+
+***** Value
+
+: 3
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..alt-5..2b..>>
+# link target: <<constant ..2b..alt-5..2b..>>
+
+
+**** Constant: =+alt-5+=                                                   :constant:
+
+
+***** Value
+
+: 2
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..gpio-clock..2b..>>
+# link target: <<constant ..2b..gpio-clock..2b..>>
+
+
+**** Constant: =+gpio-clock+=                                              :constant:
+
+
+***** Value
+
+: 3
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..high..2b..>>
+# link target: <<constant ..2b..high..2b..>>
+
+
+**** Constant: =+high+=                                                    :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..input..2b..>>
+# link target: <<constant ..2b..input..2b..>>
+
+
+**** Constant: =+input+=                                                   :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..low..2b..>>
+# link target: <<constant ..2b..low..2b..>>
+
+
+**** Constant: =+low+=                                                     :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..output..2b..>>
+# link target: <<constant ..2b..output..2b..>>
+
+
+**** Constant: =+output+=                                                  :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-alpha..2b..>>
+# link target: <<constant ..2b..pi-alpha..2b..>>
+
+
+**** Constant: =+pi-alpha+=                                                :constant:
+
+
+***** Value
+
+: 5
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-maker-egoman..2b..>>
+# link target: <<constant ..2b..pi-maker-egoman..2b..>>
+
+
+**** Constant: =+pi-maker-egoman+=                                         :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-maker-mbest..2b..>>
+# link target: <<constant ..2b..pi-maker-mbest..2b..>>
+
+
+**** Constant: =+pi-maker-mbest+=                                          :constant:
+
+
+***** Value
+
+: 2
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-maker-sony..2b..>>
+# link target: <<constant ..2b..pi-maker-sony..2b..>>
+
+
+**** Constant: =+pi-maker-sony+=                                           :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-maker-unknown..2b..>>
+# link target: <<constant ..2b..pi-maker-unknown..2b..>>
+
+
+**** Constant: =+pi-maker-unknown+=                                        :constant:
+
+
+***** Value
+
+: 3
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-model-07..2b..>>
+# link target: <<constant ..2b..pi-model-07..2b..>>
+
+
+**** Constant: =+pi-model-07+=                                             :constant:
+
+
+***** Value
+
+: 7
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-model-2..2b..>>
+# link target: <<constant ..2b..pi-model-2..2b..>>
+
+
+**** Constant: =+pi-model-2+=                                              :constant:
+
+
+***** Value
+
+: 4
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-model-3..2b..>>
+# link target: <<constant ..2b..pi-model-3..2b..>>
+
+
+**** Constant: =+pi-model-3+=                                              :constant:
+
+
+***** Value
+
+: 8
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-model-a..2b..>>
+# link target: <<constant ..2b..pi-model-a..2b..>>
+
+
+**** Constant: =+pi-model-a+=                                              :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-model-ap..2b..>>
+# link target: <<constant ..2b..pi-model-ap..2b..>>
+
+
+**** Constant: =+pi-model-ap+=                                             :constant:
+
+
+***** Value
+
+: 2
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-model-b..2b..>>
+# link target: <<constant ..2b..pi-model-b..2b..>>
+
+
+**** Constant: =+pi-model-b+=                                              :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-model-bp..2b..>>
+# link target: <<constant ..2b..pi-model-bp..2b..>>
+
+
+**** Constant: =+pi-model-bp+=                                             :constant:
+
+
+***** Value
+
+: 3
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-model-cm..2b..>>
+# link target: <<constant ..2b..pi-model-cm..2b..>>
+
+
+**** Constant: =+pi-model-cm+=                                             :constant:
+
+
+***** Value
+
+: 6
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-model-zero..2b..>>
+# link target: <<constant ..2b..pi-model-zero..2b..>>
+
+
+**** Constant: =+pi-model-zero+=                                           :constant:
+
+
+***** Value
+
+: 9
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pud-down..2b..>>
+# link target: <<constant ..2b..pud-down..2b..>>
+
+
+**** Constant: =+pud-down+=                                                :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pud-off..2b..>>
+# link target: <<constant ..2b..pud-off..2b..>>
+
+
+**** Constant: =+pud-off+=                                                 :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pud-up..2b..>>
+# link target: <<constant ..2b..pud-up..2b..>>
+
+
+**** Constant: =+pud-up+=                                                  :constant:
+
+
+***** Value
+
+: 2
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pwm-output..2b..>>
+# link target: <<constant ..2b..pwm-output..2b..>>
+
+
+**** Constant: =+pwm-output+=                                              :constant:
+
+
+***** Value
+
+: 2
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+
+
+*** External Functions
+
+-----
+
+# link target 2: <<analog-read>>
+# link target: <<function analog-read>>
+
+
+**** Function: =analog-read=                                               :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(analog-read pin)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<analog-write>>
+# link target: <<function analog-write>>
+
+
+**** Function: =analog-write=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(analog-write pin value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<delay>>
+# link target: <<function delay>>
+
+
+**** Function: =delay=                                                     :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(delay how-long)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<delay-microseconds>>
+# link target: <<function delay-microseconds>>
+
+
+**** Function: =delay-microseconds=                                        :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(delay-microseconds how-long)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<digital-read>>
+# link target: <<function digital-read>>
+
+
+**** Function: =digital-read=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(digital-read pin)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<digital-write>>
+# link target: <<function digital-write>>
+
+
+**** Function: =digital-write=                                             :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(digital-write pin value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<get-alt>>
+# link target: <<function get-alt>>
+
+
+**** Function: =get-alt=                                                   :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(get-alt pin)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<micros>>
+# link target: <<function micros>>
+
+
+**** Function: =micros=                                                    :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(micros)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<millis>>
+# link target: <<function millis>>
+
+
+**** Function: =millis=                                                    :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(millis)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pi-board-rev>>
+# link target: <<function pi-board-rev>>
+
+
+**** Function: =pi-board-rev=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pi-board-rev)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pin-mode>>
+# link target: <<function pin-mode>>
+
+
+**** Function: =pin-mode=                                                  :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pin-mode pin mode)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pull-up-dn-control>>
+# link target: <<function pull-up-dn-control>>
+
+
+**** Function: =pull-up-dn-control=                                        :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pull-up-dn-control pin pud)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pwm-write>>
+# link target: <<function pwm-write>>
+
+
+**** Function: =pwm-write=                                                 :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pwm-write pin value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<wiring-pi-setup>>
+# link target: <<function wiring-pi-setup>>
+
+
+**** Function: =wiring-pi-setup=                                           :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(wiring-pi-setup)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<wiring-pi-setup-gpio>>
+# link target: <<function wiring-pi-setup-gpio>>
+
+
+**** Function: =wiring-pi-setup-gpio=                                      :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(wiring-pi-setup-gpio)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<wiring-pi-setup-phys>>
+# link target: <<function wiring-pi-setup-phys>>
+
+
+**** Function: =wiring-pi-setup-phys=                                      :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(wiring-pi-setup-phys)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<wiring-pi-setup-sys>>
+# link target: <<function wiring-pi-setup-sys>>
+
+
+**** Function: =wiring-pi-setup-sys=                                       :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(wiring-pi-setup-sys)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<wrapped-pi-board-id>>
+# link target: <<function wrapped-pi-board-id>>
+
+
+**** Function: =wrapped-pi-board-id=                                       :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(wrapped-pi-board-id)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+
+
+
+** Internal Symbols
+
+
+
+
+*** Internal Classes
+
+-----
+
+# link target 2: <<wiring-pi-node-struct-tclass>>
+# link target: <<class wiring-pi-node-struct-tclass>>
+
+
+**** Class: =wiring-pi-node-struct-tclass=                                    :class:
+
+
+***** Inheritance
+
+- Parent classes:
+    [[class foreign-struct-type][foreign-struct-type]], [[class translatable
+    foreign-type][translatable-foreign-type]]
+- Precedence list:
+    [[class wiring-pi-node-struct-tclass][wiring-pi-node-struct-tclass]], [[class
+    foreign-struct-type][foreign-struct-type]], [[class named-foreign-type][named
+    foreign-type]], [[class translatable-foreign-type][translatable-foreign-type]],
+    [[class foreign-type][foreign-type]], [[class standard-object][standard
+    object]], [[class slot-object][slot-object]], [[class t][t]]
+- Direct subclasses:
+    None.
+
+
+***** Description
+
+Not documented.
+
+
+***** Direct Slots
+
+
+
+***** Indirect Slots
+
+# link target 2: <<bare>>
+# link target: <<slot bare>>
+
+
+****** Slot: =bare=                                                              :slot:
+
+- Value type: =t=
+- Initial value: =NIL=
+- Initargs: bare
+- Allocation: instance
+
+
+# link target 2: <<alignment>>
+# link target: <<slot alignment>>
+
+
+****** Slot: =alignment=                                                         :slot:
+
+- Value type: =t=
+- Initial value: =NIL=
+- Initargs: alignment
+- Allocation: instance
+
+
+# link target 2: <<size>>
+# link target: <<slot size>>
+
+
+****** Slot: =size=                                                              :slot:
+
+- Value type: =t=
+- Initial value: =NIL=
+- Initargs: size
+- Allocation: instance
+
+
+# link target 2: <<slots>>
+# link target: <<slot slots>>
+
+
+****** Slot: =slots=                                                             :slot:
+
+- Value type: =t=
+- Initial value: =(MAKE-HASH-TABLE)=
+- Initargs: slots
+- Allocation: instance
+
+
+# link target 2: <<name>>
+# link target: <<slot name>>
+
+
+****** Slot: =name=                                                              :slot:
+
+- Value type: =t=
+- Initial value: =(ERROR "Must specify a NAME.")=
+- Initargs: name
+- Allocation: instance
+
+
+
+
+
+
+
+*** Internal Constants
+
+-----
+
+# link target 2: <<..2b..int-edge-both..2b..>>
+# link target: <<constant ..2b..int-edge-both..2b..>>
+
+
+**** Constant: =+int-edge-both+=                                           :constant:
+
+
+***** Value
+
+: 3
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..int-edge-falling..2b..>>
+# link target: <<constant ..2b..int-edge-falling..2b..>>
+
+
+**** Constant: =+int-edge-falling+=                                        :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..int-edge-rising..2b..>>
+# link target: <<constant ..2b..int-edge-rising..2b..>>
+
+
+**** Constant: =+int-edge-rising+=                                         :constant:
+
+
+***** Value
+
+: 2
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..int-edge-setup..2b..>>
+# link target: <<constant ..2b..int-edge-setup..2b..>>
+
+
+**** Constant: =+int-edge-setup+=                                          :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-version-1..2b..>>
+# link target: <<constant ..2b..pi-version-1..2b..>>
+
+
+**** Constant: =+pi-version-1+=                                            :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-version-1-1..2b..>>
+# link target: <<constant ..2b..pi-version-1-1..2b..>>
+
+
+**** Constant: =+pi-version-1-1+=                                          :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-version-1-2..2b..>>
+# link target: <<constant ..2b..pi-version-1-2..2b..>>
+
+
+**** Constant: =+pi-version-1-2+=                                          :constant:
+
+
+***** Value
+
+: 2
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pi-version-2..2b..>>
+# link target: <<constant ..2b..pi-version-2..2b..>>
+
+
+**** Constant: =+pi-version-2+=                                            :constant:
+
+
+***** Value
+
+: 3
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pwm-mode-bal..2b..>>
+# link target: <<constant ..2b..pwm-mode-bal..2b..>>
+
+
+**** Constant: =+pwm-mode-bal+=                                            :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pwm-mode-ms..2b..>>
+# link target: <<constant ..2b..pwm-mode-ms..2b..>>
+
+
+**** Constant: =+pwm-mode-ms+=                                             :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..pwm-tone-output..2b..>>
+# link target: <<constant ..2b..pwm-tone-output..2b..>>
+
+
+**** Constant: =+pwm-tone-output+=                                         :constant:
+
+
+***** Value
+
+: 6
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..soft-pwm-output..2b..>>
+# link target: <<constant ..2b..soft-pwm-output..2b..>>
+
+
+**** Constant: =+soft-pwm-output+=                                         :constant:
+
+
+***** Value
+
+: 4
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..soft-tone-output..2b..>>
+# link target: <<constant ..2b..soft-tone-output..2b..>>
+
+
+**** Constant: =+soft-tone-output+=                                        :constant:
+
+
+***** Value
+
+: 5
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..wpi-almost..2b..>>
+# link target: <<constant ..2b..wpi-almost..2b..>>
+
+
+**** Constant: =+wpi-almost+=                                              :constant:
+
+
+***** Value
+
+: NIL
+
+Type: =null=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..wpi-fatal..2b..>>
+# link target: <<constant ..2b..wpi-fatal..2b..>>
+
+
+**** Constant: =+wpi-fatal+=                                               :constant:
+
+
+***** Value
+
+: T
+
+Type: =boolean=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..wpi-mode-gpio..2b..>>
+# link target: <<constant ..2b..wpi-mode-gpio..2b..>>
+
+
+**** Constant: =+wpi-mode-gpio+=                                           :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..wpi-mode-gpio-sys..2b..>>
+# link target: <<constant ..2b..wpi-mode-gpio-sys..2b..>>
+
+
+**** Constant: =+wpi-mode-gpio-sys+=                                       :constant:
+
+
+***** Value
+
+: 2
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..wpi-mode-phys..2b..>>
+# link target: <<constant ..2b..wpi-mode-phys..2b..>>
+
+
+**** Constant: =+wpi-mode-phys+=                                           :constant:
+
+
+***** Value
+
+: 3
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..wpi-mode-piface..2b..>>
+# link target: <<constant ..2b..wpi-mode-piface..2b..>>
+
+
+**** Constant: =+wpi-mode-piface+=                                         :constant:
+
+
+***** Value
+
+: 4
+
+Type: =integer=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..wpi-mode-pins..2b..>>
+# link target: <<constant ..2b..wpi-mode-pins..2b..>>
+
+
+**** Constant: =+wpi-mode-pins+=                                           :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..wpi-mode-uninitialised..2b..>>
+# link target: <<constant ..2b..wpi-mode-uninitialised..2b..>>
+
+
+**** Constant: =+wpi-mode-uninitialised+=                                  :constant:
+
+
+***** Value
+
+: -1
+
+Type: =fixnum=
+
+
+***** Description
+
+Not documented.
+
+
+
+
+
+*** Internal Functions
+
+-----
+
+# link target 2: <<..25..var-accessor-..2b..pi-maker-names..2b..>>
+# link target: <<function ..25..var-accessor-..2b..pi-maker-names..2b..>>
+
+
+**** Function: =%var-accessor-+pi-maker-names+=                            :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(%var-accessor-+pi-maker-names+)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+# link target 2: <<..25..var-accessor-..2b..pi-maker-names..2b..>>
+# link target: <<function ..25..var-accessor-..2b..pi-maker-names..2b..>>
+
+
+**** Function: =(%var-accessor-+pi-maker-names+)=                          :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(setf (%var-accessor-+pi-maker-names+) value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+-----
+
+# link target 2: <<..25..var-accessor-..2b..pi-memory-size..2b..>>
+# link target: <<function ..25..var-accessor-..2b..pi-memory-size..2b..>>
+
+
+**** Function: =%var-accessor-+pi-memory-size+=                            :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(%var-accessor-+pi-memory-size+)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+# link target 2: <<..25..var-accessor-..2b..pi-memory-size..2b..>>
+# link target: <<function ..25..var-accessor-..2b..pi-memory-size..2b..>>
+
+
+**** Function: =(%var-accessor-+pi-memory-size+)=                          :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(setf (%var-accessor-+pi-memory-size+) value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+-----
+
+# link target 2: <<..25..var-accessor-..2b..pi-model-names..2b..>>
+# link target: <<function ..25..var-accessor-..2b..pi-model-names..2b..>>
+
+
+**** Function: =%var-accessor-+pi-model-names+=                            :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(%var-accessor-+pi-model-names+)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+# link target 2: <<..25..var-accessor-..2b..pi-model-names..2b..>>
+# link target: <<function ..25..var-accessor-..2b..pi-model-names..2b..>>
+
+
+**** Function: =(%var-accessor-+pi-model-names+)=                          :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(setf (%var-accessor-+pi-model-names+) value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+-----
+
+# link target 2: <<..25..var-accessor-..2b..pi-revision-names..2b..>>
+# link target: <<function ..25..var-accessor-..2b..pi-revision-names..2b..>>
+
+
+**** Function: =%var-accessor-+pi-revision-names+=                         :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(%var-accessor-+pi-revision-names+)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+# link target 2: <<..25..var-accessor-..2b..pi-revision-names..2b..>>
+# link target: <<function ..25..var-accessor-..2b..pi-revision-names..2b..>>
+
+
+**** Function: =(%var-accessor-+pi-revision-names+)=                       :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(setf (%var-accessor-+pi-revision-names+) value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+-----
+
+# link target 2: <<..25..var-accessor-wiring-pi-nodes>>
+# link target: <<function ..25..var-accessor-wiring-pi-nodes>>
+
+
+**** Function: =%var-accessor-wiring-pi-nodes=                             :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(%var-accessor-wiring-pi-nodes)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+# link target 2: <<..25..var-accessor-wiring-pi-nodes>>
+# link target: <<function ..25..var-accessor-wiring-pi-nodes>>
+
+
+**** Function: =(%var-accessor-wiring-pi-nodes)=                           :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(setf (%var-accessor-wiring-pi-nodes) value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+-----
+
+# link target 2: <<digital-read-byte>>
+# link target: <<function digital-read-byte>>
+
+
+**** Function: =digital-read-byte=                                         :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(digital-read-byte)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<digital-write-byte>>
+# link target: <<function digital-write-byte>>
+
+
+**** Function: =digital-write-byte=                                        :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(digital-write-byte value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<gpio-clock-set>>
+# link target: <<function gpio-clock-set>>
+
+
+**** Function: =gpio-clock-set=                                            :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(gpio-clock-set pin freq)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<phys-pin-to-gpio>>
+# link target: <<function phys-pin-to-gpio>>
+
+
+**** Function: =phys-pin-to-gpio=                                          :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(phys-pin-to-gpio phys-pin)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pi-board-id>>
+# link target: <<function pi-board-id>>
+
+
+**** Function: =pi-board-id=                                               :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pi-board-id model rev mem maker overvolted)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pin-mode-alt>>
+# link target: <<function pin-mode-alt>>
+
+
+**** Function: =pin-mode-alt=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pin-mode-alt pin mode)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pwm-set-clock>>
+# link target: <<function pwm-set-clock>>
+
+
+**** Function: =pwm-set-clock=                                             :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pwm-set-clock divisor)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pwm-set-mode>>
+# link target: <<function pwm-set-mode>>
+
+
+**** Function: =pwm-set-mode=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pwm-set-mode mode)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pwm-set-range>>
+# link target: <<function pwm-set-range>>
+
+
+**** Function: =pwm-set-range=                                             :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pwm-set-range range)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<pwm-town-write>>
+# link target: <<function pwm-town-write>>
+
+
+**** Function: =pwm-town-write=                                            :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pwm-town-write pin freq)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<set-pad-drive>>
+# link target: <<function set-pad-drive>>
+
+
+**** Function: =set-pad-drive=                                             :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(set-pad-drive group value)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<wait-for-interrupt>>
+# link target: <<function wait-for-interrupt>>
+
+
+**** Function: =wait-for-interrupt=                                        :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(wait-for-interrupt pin ms)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<wiring-pi-isr-interal>>
+# link target: <<function wiring-pi-isr-interal>>
+
+
+**** Function: =wiring-pi-isr-interal=                                     :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(wiring-pi-isr-interal pin mode function)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<wiring-pi-setup-pi-face>>
+# link target: <<function wiring-pi-setup-pi-face>>
+
+
+**** Function: =wiring-pi-setup-pi-face=                                   :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(wiring-pi-setup-pi-face)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<wpi-pin-to-gpio>>
+# link target: <<function wpi-pin-to-gpio>>
+
+
+**** Function: =wpi-pin-to-gpio=                                           :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(wpi-pin-to-gpio wpi-pin)
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+
+
+
+** Index
+
+ [[index A][A]]  [[index D][D]]  [[index G][G]]  [[index M][M]]  [[index P][P]]
+ [[index S][S]]  [[index W][W]]  [[index NONALPHABETIC][NONALPHABETIC]]  
+
+
+*** Nonalphabetic
+
+
+# link target: <<index NONALPHABETIC>>
+- [[function ..25..var-accessor-..2b..pi-maker-names..2b..][=cl-wiringpi2
+  ffi::%var-accessor-+pi-maker-names+=]], Function
+- [[function ..25..var-accessor-..2b..pi-memory-size..2b..][=cl-wiringpi2
+  ffi::%var-accessor-+pi-memory-size+=]], Function
+- [[function ..25..var-accessor-..2b..pi-model-names..2b..][=cl-wiringpi2
+  ffi::%var-accessor-+pi-model-names+=]], Function
+- [[function ..25..var-accessor-..2b..pi-revision-names..2b..][=cl-wiringpi2
+  ffi::%var-accessor-+pi-revision-names+=]], Function
+- [[function ..25..var-accessor-wiring-pi-nodes][=cl-wiringpi2-ffi::%var
+  accessor-wiring-pi-nodes=]], Function
+- [[constant ..2b..alt-0..2b..][=cl-wiringpi2-ffi:+alt-0+=]], Constant
+- [[constant ..2b..alt-1..2b..][=cl-wiringpi2-ffi:+alt-1+=]], Constant
+- [[constant ..2b..alt-2..2b..][=cl-wiringpi2-ffi:+alt-2+=]], Constant
+- [[constant ..2b..alt-3..2b..][=cl-wiringpi2-ffi:+alt-3+=]], Constant
+- [[constant ..2b..alt-4..2b..][=cl-wiringpi2-ffi:+alt-4+=]], Constant
+- [[constant ..2b..alt-5..2b..][=cl-wiringpi2-ffi:+alt-5+=]], Constant
+- [[constant ..2b..gpio-clock..2b..][=cl-wiringpi2-ffi:+gpio-clock+=]],
+  Constant
+- [[constant ..2b..high..2b..][=cl-wiringpi2-ffi:+high+=]], Constant
+- [[constant ..2b..input..2b..][=cl-wiringpi2-ffi:+input+=]], Constant
+- [[constant ..2b..int-edge-both..2b..][=cl-wiringpi2-ffi::+int-edge-both+=]],
+  Constant
+- [[constant ..2b..int-edge-falling..2b..][=cl-wiringpi2-ffi::+int-edge
+  falling+=]], Constant
+- [[constant ..2b..int-edge-rising..2b..][=cl-wiringpi2-ffi::+int-edge
+  rising+=]], Constant
+- [[constant ..2b..int-edge-setup..2b..][=cl-wiringpi2-ffi::+int-edge
+  setup+=]], Constant
+- [[constant ..2b..low..2b..][=cl-wiringpi2-ffi:+low+=]], Constant
+- [[constant ..2b..output..2b..][=cl-wiringpi2-ffi:+output+=]], Constant
+- [[constant ..2b..pi-alpha..2b..][=cl-wiringpi2-ffi:+pi-alpha+=]], Constant
+- [[constant ..2b..pi-maker-egoman..2b..][=cl-wiringpi2-ffi:+pi-maker
+  egoman+=]], Constant
+- [[constant ..2b..pi-maker-mbest..2b..][=cl-wiringpi2-ffi:+pi-maker-mbest+=]],
+  Constant
+- [[constant ..2b..pi-maker-sony..2b..][=cl-wiringpi2-ffi:+pi-maker-sony+=]],
+  Constant
+- [[constant ..2b..pi-maker-unknown..2b..][=cl-wiringpi2-ffi:+pi-maker
+  unknown+=]], Constant
+- [[constant ..2b..pi-model-07..2b..][=cl-wiringpi2-ffi:+pi-model-07+=]],
+  Constant
+- [[constant ..2b..pi-model-2..2b..][=cl-wiringpi2-ffi:+pi-model-2+=]],
+  Constant
+- [[constant ..2b..pi-model-3..2b..][=cl-wiringpi2-ffi:+pi-model-3+=]],
+  Constant
+- [[constant ..2b..pi-model-a..2b..][=cl-wiringpi2-ffi:+pi-model-a+=]],
+  Constant
+- [[constant ..2b..pi-model-ap..2b..][=cl-wiringpi2-ffi:+pi-model-ap+=]],
+  Constant
+- [[constant ..2b..pi-model-b..2b..][=cl-wiringpi2-ffi:+pi-model-b+=]],
+  Constant
+- [[constant ..2b..pi-model-bp..2b..][=cl-wiringpi2-ffi:+pi-model-bp+=]],
+  Constant
+- [[constant ..2b..pi-model-cm..2b..][=cl-wiringpi2-ffi:+pi-model-cm+=]],
+  Constant
+- [[constant ..2b..pi-model-zero..2b..][=cl-wiringpi2-ffi:+pi-model-zero+=]],
+  Constant
+- [[constant ..2b..pi-version-1..2b..][=cl-wiringpi2-ffi::+pi-version-1+=]],
+  Constant
+- [[constant ..2b..pi-version-1-1..2b..][=cl-wiringpi2-ffi::+pi-version-1
+  1+=]], Constant
+- [[constant ..2b..pi-version-1-2..2b..][=cl-wiringpi2-ffi::+pi-version-1
+  2+=]], Constant
+- [[constant ..2b..pi-version-2..2b..][=cl-wiringpi2-ffi::+pi-version-2+=]],
+  Constant
+- [[constant ..2b..pud-down..2b..][=cl-wiringpi2-ffi:+pud-down+=]], Constant
+- [[constant ..2b..pud-off..2b..][=cl-wiringpi2-ffi:+pud-off+=]], Constant
+- [[constant ..2b..pud-up..2b..][=cl-wiringpi2-ffi:+pud-up+=]], Constant
+- [[constant ..2b..pwm-mode-bal..2b..][=cl-wiringpi2-ffi::+pwm-mode-bal+=]],
+  Constant
+- [[constant ..2b..pwm-mode-ms..2b..][=cl-wiringpi2-ffi::+pwm-mode-ms+=]],
+  Constant
+- [[constant ..2b..pwm-output..2b..][=cl-wiringpi2-ffi:+pwm-output+=]],
+  Constant
+- [[constant ..2b..pwm-tone-output..2b..][=cl-wiringpi2-ffi::+pwm-tone
+  output+=]], Constant
+- [[constant ..2b..soft-pwm-output..2b..][=cl-wiringpi2-ffi::+soft-pwm
+  output+=]], Constant
+- [[constant ..2b..soft-tone-output..2b..][=cl-wiringpi2-ffi::+soft-tone
+  output+=]], Constant
+- [[constant ..2b..wpi-almost..2b..][=cl-wiringpi2-ffi::+wpi-almost+=]],
+  Constant
+- [[constant ..2b..wpi-fatal..2b..][=cl-wiringpi2-ffi::+wpi-fatal+=]], Constant
+- [[constant ..2b..wpi-mode-gpio..2b..][=cl-wiringpi2-ffi::+wpi-mode-gpio+=]],
+  Constant
+- [[constant ..2b..wpi-mode-gpio-sys..2b..][=cl-wiringpi2-ffi::+wpi-mode-gpio
+  sys+=]], Constant
+- [[constant ..2b..wpi-mode-phys..2b..][=cl-wiringpi2-ffi::+wpi-mode-phys+=]],
+  Constant
+- [[constant ..2b..wpi-mode-piface..2b..][=cl-wiringpi2-ffi::+wpi-mode
+  piface+=]], Constant
+- [[constant ..2b..wpi-mode-pins..2b..][=cl-wiringpi2-ffi::+wpi-mode-pins+=]],
+  Constant
+- [[constant ..2b..wpi-mode-uninitialised..2b..][=cl-wiringpi2-ffi::+wpi-mode
+  uninitialised+=]], Constant
+
+
+
+*** A
+
+
+# link target: <<index A>>
+- [[function analog-read][=cl-wiringpi2-ffi:analog-read=]], Function
+- [[function analog-write][=cl-wiringpi2-ffi:analog-write=]], Function
+
+
+
+*** D
+
+
+# link target: <<index D>>
+- [[function delay][=cl-wiringpi2-ffi:delay=]], Function
+- [[function delay-microseconds][=cl-wiringpi2-ffi:delay-microseconds=]],
+  Function
+- [[function digital-read][=cl-wiringpi2-ffi:digital-read=]], Function
+- [[function digital-read-byte][=cl-wiringpi2-ffi::digital-read-byte=]],
+  Function
+- [[function digital-write][=cl-wiringpi2-ffi:digital-write=]], Function
+- [[function digital-write-byte][=cl-wiringpi2-ffi::digital-write-byte=]],
+  Function
+
+
+
+*** G
+
+
+# link target: <<index G>>
+- [[function get-alt][=cl-wiringpi2-ffi:get-alt=]], Function
+- [[function gpio-clock-set][=cl-wiringpi2-ffi::gpio-clock-set=]], Function
+
+
+
+*** M
+
+
+# link target: <<index M>>
+- [[function micros][=cl-wiringpi2-ffi:micros=]], Function
+- [[function millis][=cl-wiringpi2-ffi:millis=]], Function
+
+
+
+*** P
+
+
+# link target: <<index P>>
+- [[function phys-pin-to-gpio][=cl-wiringpi2-ffi::phys-pin-to-gpio=]], Function
+- [[function pi-board-id][=cl-wiringpi2-ffi::pi-board-id=]], Function
+- [[function pi-board-rev][=cl-wiringpi2-ffi:pi-board-rev=]], Function
+- [[function pin-mode][=cl-wiringpi2-ffi:pin-mode=]], Function
+- [[function pin-mode-alt][=cl-wiringpi2-ffi::pin-mode-alt=]], Function
+- [[function pull-up-dn-control][=cl-wiringpi2-ffi:pull-up-dn-control=]],
+  Function
+- [[function pwm-set-clock][=cl-wiringpi2-ffi::pwm-set-clock=]], Function
+- [[function pwm-set-mode][=cl-wiringpi2-ffi::pwm-set-mode=]], Function
+- [[function pwm-set-range][=cl-wiringpi2-ffi::pwm-set-range=]], Function
+- [[function pwm-town-write][=cl-wiringpi2-ffi::pwm-town-write=]], Function
+- [[function pwm-write][=cl-wiringpi2-ffi:pwm-write=]], Function
+
+
+
+*** S
+
+
+# link target: <<index S>>
+- [[function set-pad-drive][=cl-wiringpi2-ffi::set-pad-drive=]], Function
+
+
+
+*** W
+
+
+# link target: <<index W>>
+- [[function wait-for-interrupt][=cl-wiringpi2-ffi::wait-for-interrupt=]],
+  Function
+- [[function wiring-pi-isr-interal][=cl-wiringpi2-ffi::wiring-pi-isr
+  interal=]], Function
+- [[class wiring-pi-node-struct-tclass][=cl-wiringpi2-ffi::wiring-pi-node
+  struct-tclass=]], Class
+- [[function wiring-pi-setup][=cl-wiringpi2-ffi:wiring-pi-setup=]], Function
+- [[function wiring-pi-setup-gpio][=cl-wiringpi2-ffi:wiring-pi-setup-gpio=]],
+  Function
+- [[function wiring-pi-setup-phys][=cl-wiringpi2-ffi:wiring-pi-setup-phys=]],
+  Function
+- [[function wiring-pi-setup-pi-face][=cl-wiringpi2-ffi::wiring-pi-setup-pi
+  face=]], Function
+- [[function wiring-pi-setup-sys][=cl-wiringpi2-ffi:wiring-pi-setup-sys=]],
+  Function
+- [[function wpi-pin-to-gpio][=cl-wiringpi2-ffi::wpi-pin-to-gpio=]], Function
+- [[function wrapped-pi-board-id][=cl-wiringpi2-ffi:wrapped-pi-board-id=]],
+  Function
+
+
+
+
+
+* Colophon
+
+This documentation was generated from Common Lisp source code using CLOD, version 1.0.
+The latest version of CLOD is available [[http://bitbucket.org/eeeickythump/clod/][here]].
