@@ -54,14 +54,14 @@ or :ALT-0 - :ALT-5 for 6 different 'alternate functions'.
 See also `(SETF PIN-MODE)', `PIN-MODE*'."
   (let ((mode (wpi2-ffi:get-alt pin)))
     (ecase mode
-      (wpi2-ffi:+input+ :INPUT)
-      (wpi2-ffi:+output+ :OUTPUT)
-      (wpi2-ffi:+alt-0+ :ALT-0)
-      (wpi2-ffi:+alt-1+ :ALT-1)
-      (wpi2-ffi:+alt-2+ :ALT-2)
-      (wpi2-ffi:+alt-3+ :ALT-3)
-      (wpi2-ffi:+alt-4+ :ALT-4)
-      (wpi2-ffi:+alt-5+ :ALT-5))))
+      (#.wpi2-ffi:+input+ :INPUT)
+      (#.wpi2-ffi:+output+ :OUTPUT)
+      (#.wpi2-ffi:+alt-0+ :ALT-0)
+      (#.wpi2-ffi:+alt-1+ :ALT-1)
+      (#.wpi2-ffi:+alt-2+ :ALT-2)
+      (#.wpi2-ffi:+alt-3+ :ALT-3)
+      (#.wpi2-ffi:+alt-4+ :ALT-4)
+      (#.wpi2-ffi:+alt-5+ :ALT-5))))
 
 (defun (setf pin-mode) (mode pin)
   "Try to set `PIN' to `MODE'.
