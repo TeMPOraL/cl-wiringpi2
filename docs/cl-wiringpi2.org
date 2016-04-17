@@ -367,6 +367,32 @@ See also `GET-PIN-MODE-BITS'.
 
 
 
+# link target 2: <<pin-mode>>
+# link target: <<function pin-mode>>
+
+
+**** Function: =(pin-mode)=                                                :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(setf (pin-mode pin) mode)
+#+END_SRC
+
+
+***** Description
+
+Try to set `PIN' to `MODE'.
+Available modes are:
+  - :INPUT
+  - :OUTPUT
+  - :PWM-OUTPUT
+  - :GPIO-CLOCK
+
+This function has no effect in :SYS mode.
+
+
 -----
 
 # link target 2: <<pin-mode*>>
