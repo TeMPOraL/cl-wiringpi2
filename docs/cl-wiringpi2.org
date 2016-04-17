@@ -1,0 +1,667 @@
+#+TITLE: The CL-WIRINGPI2 package
+#+AUTHOR: Jacek Złydach (via CLOD)
+#+EMAIL: temporal.pl@gmail.com
+#+LINK: hs http://www.lispworks.com/reference/HyperSpec//%s
+#+STARTUP: showall
+#+OPTIONS: toc:4 H:10 @:t tags:nil
+
+# link target 2: <<cl-wiringpi2>>
+# link target: <<package cl-wiringpi2>>
+
+
+* Internal Package: =cl-wiringpi2=                                       :package:
+
+- Uses:
+    [[package common-lisp][common-lisp]]
+- Used by:
+    [[package cl-wiringpi2-examples][cl-wiringpi2-examples]]
+
+
+** Description
+
+Not documented.
+
+
+** External Symbols
+
+
+
+
+*** External Constants
+
+-----
+
+# link target 2: <<..2b..high..2b..>>
+# link target: <<constant ..2b..high..2b..>>
+
+
+**** Constant: =+high+=                                                    :constant:
+
+
+***** Value
+
+: 1
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+-----
+
+# link target 2: <<..2b..low..2b..>>
+# link target: <<constant ..2b..low..2b..>>
+
+
+**** Constant: =+low+=                                                     :constant:
+
+
+***** Value
+
+: 0
+
+Type: =bit=
+
+
+***** Description
+
+Not documented.
+
+
+
+
+
+*** External Functions
+
+-----
+
+# link target 2: <<analog-read>>
+# link target: <<function analog-read>>
+
+
+**** Function: =analog-read=                                               :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(analog-read pin)
+#+END_SRC
+
+
+***** Description
+
+Returns the value on the analog input `PIN'.
+Note, apparently there are no analog pins on the Raspberry Pi itself; read will return a dummy value there.
+
+
+
+-----
+
+# link target 2: <<analog-write>>
+# link target: <<function analog-write>>
+
+
+**** Function: =analog-write=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(analog-write pin value)
+#+END_SRC
+
+
+***** Description
+
+Writes the given `VALUE' to the supplied analog `PIN'.
+Note, apparently there are no analog pins on the Raspberry Pi itself - the write will be non-effective there.
+
+
+
+-----
+
+# link target 2: <<delay>>
+# link target: <<function delay>>
+
+
+**** Function: =delay=                                                     :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(delay milliseconds)
+#+END_SRC
+
+
+***** Description
+
+Pause the execution for at least `MILLISECONDS' milliseconds.
+Maximum delay is approximately 49 days.
+
+
+
+-----
+
+# link target 2: <<delay-microseconds>>
+# link target: <<function delay-microseconds>>
+
+
+**** Function: =delay-microseconds=                                        :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(delay-microseconds microseconds)
+#+END_SRC
+
+
+***** Description
+
+Pause the execution for at least `MICROSECONDS' microseconds.
+Maximum delay is approximately 71 minutes.
+
+
+
+-----
+
+# link target 2: <<digital-read>>
+# link target: <<function digital-read>>
+
+
+**** Function: =digital-read=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(digital-read pin)
+#+END_SRC
+
+
+***** Description
+
+Read the state of `PIN'.
+Returns numeric value of the pin state; compare with constants `+LOW+' and `+HIGH+'.
+
+
+
+-----
+
+# link target 2: <<digital-write>>
+# link target: <<function digital-write>>
+
+
+**** Function: =digital-write=                                             :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(digital-write pin value)
+#+END_SRC
+
+
+***** Description
+
+Write `VALUE' to `PIN'.
+Use constants `+LOW+' and `+HIGH+' for `VALUE'.
+
+
+
+-----
+
+# link target 2: <<microseconds>>
+# link target: <<function microseconds>>
+
+
+**** Function: =microseconds=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(microseconds)
+#+END_SRC
+
+
+***** Description
+
+Returns the number of microseconds since the call to setup function.
+Note that the number will wrap around after around 71 minutes.
+
+
+
+-----
+
+# link target 2: <<milliseconds>>
+# link target: <<function milliseconds>>
+
+
+**** Function: =milliseconds=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(milliseconds)
+#+END_SRC
+
+
+***** Description
+
+Returns the number of milliseconds since the call to setup function.
+Note that the number will wrap around after around 49 days.
+
+
+
+-----
+
+# link target 2: <<pi-board-info>>
+# link target: <<function pi-board-info>>
+
+
+**** Function: =pi-board-info=                                             :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pi-board-info)
+#+END_SRC
+
+
+***** Description
+
+Returns the hardware information of Raspberry Pi board.
+Result is an plist with following keys:
+:MODEL - keyword describing the Raspberry Pi model
+:REVISION - number describing the Raspberry Pi revision (see `PI-BOARD-REVISION')
+:MEMORY - number of megabytes of RAM the board has
+:MAKER - keyword identifying the maker of the board
+:OVERVOLTED - `T' if the board was overclocked; `NIL' otherwise.
+
+Models: :A, :B, :B+, :CM, :ALPHA, :2, :3, :ZERO, :07, :UNKNOWN
+Makers: :SONY :EGOMAN :MBEST :UNKNOWN
+
+
+
+-----
+
+# link target 2: <<pi-board-info*>>
+# link target: <<function pi-board-info*>>
+
+
+**** Function: =pi-board-info*=                                            :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pi-board-info*)
+#+END_SRC
+
+
+***** Description
+
+Like `PI-BOARD-INFO', but gives the raw values returned from the Wiring Pi library.
+They are, in sequence: model id, revision id, memory, maker id, overvolted state.
+
+
+
+-----
+
+# link target 2: <<pi-board-revision>>
+# link target: <<function pi-board-revision>>
+
+
+**** Function: =pi-board-revision=                                         :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pi-board-revision)
+#+END_SRC
+
+
+***** Description
+
+Returns the board version of the Raspberry Pi. It will be either 1 or 2.
+
+Revision 1 means early Model A and B's.
+Revision 2 is everything else - B, B+, CM, Pi 2, Pi Zero, Pi3.
+Some of the pins in Broadcom numeration change their numbers depending on the board revision.
+
+
+
+-----
+
+# link target 2: <<pin-mode>>
+# link target: <<function pin-mode>>
+
+
+**** Function: =pin-mode=                                                  :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pin-mode pin)
+#+END_SRC
+
+
+***** Description
+
+Try to get the mode `PIN' is in.
+Returns either :INPUT or :OUTPUT for valid I/O modes,
+or :ALT-0 - :ALT-5 for 6 different 'alternate functions'.
+
+See also `GET-PIN-MODE-BITS'.
+
+
+
+-----
+
+# link target 2: <<pin-mode*>>
+# link target: <<function pin-mode*>>
+
+
+**** Function: =pin-mode*=                                                 :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pin-mode* pin)
+#+END_SRC
+
+
+***** Description
+
+Returns the raw bits of `PIN' mode as an integer.
+
+
+
+-----
+
+# link target 2: <<pwm-write>>
+# link target: <<function pwm-write>>
+
+
+**** Function: =pwm-write=                                                 :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(pwm-write pin value)
+#+END_SRC
+
+
+***** Description
+
+Write `VALUE' to PWM register for the given `PIN'.
+The range for `VALUE' is 0-1024 for Raspberry Pi's on-board PWM pin (pin 1, BMC_GPIO 18, physical: 12).
+
+
+
+-----
+
+# link target 2: <<set-pull-resistor-mode>>
+# link target: <<function set-pull-resistor-mode>>
+
+
+**** Function: =set-pull-resistor-mode=                                    :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(set-pull-resistor-mode pin mode)
+#+END_SRC
+
+
+***** Description
+
+Set the mode of pull-up / pull-down resistors on the `PIN'.
+Available modes are:
+  - :OFF - no pull up / down
+  - :PULL-UP - pull up (to 3.3V)
+  - :PULL-DOWN - pull down (pull to ground)
+
+`PIN' should be set to input.
+
+
+
+-----
+
+# link target 2: <<setup>>
+# link target: <<function setup>>
+
+
+**** Function: =setup=                                                     :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(setup &key (mode wiring-pi) (terminate-on-error nil))
+#+END_SRC
+
+
+***** Description
+
+Initialize the Wiring Pi library.
+`MODE' determines the type of initialization:
+  - :WIRING-PI - use Wiring Pi pin numeration
+  - :PHYS - use physical pin numeration
+  - :GPIO, :BROADCOM - use Broadcom pin numeration
+  - :SYS - use the /sys/class/gpio interface instead of accessing the hardware directly
+
+Note that all modes except :SYS require the program to be run with superuser privileges.
+Pin numeration under :SYS mode is the same as in :GPIO/:BROADCOM mode.
+
+You should call this function only once per execution of the program. For convenience,
+calling it again with the same `MODE' will be ignored; otherwise an error will be signalled.
+
+Set `TERMINATE-ON-ERROR' to `NIL' to restore the default behaviour of Wiring Pi 2 causing
+the process to terminate if setup function fails.
+
+
+
+
+
+
+** Internal Symbols
+
+
+
+
+*** Internal Global Variables
+
+-----
+
+# link target 2: <<*setup-mode*>>
+# link target: <<variable *setup-mode*>>
+
+
+**** Variable: =*setup-mode*=                                              :variable:
+
+
+***** Value
+
+: NIL
+
+Type: =null=
+
+
+***** Description
+
+Mode in which Wiring Pi was initialized.
+
+
+
+
+
+*** Internal Functions
+
+-----
+
+# link target 2: <<in-sys-mode>>
+# link target: <<function in-sys-mode>>
+
+
+**** Function: =in-sys-mode=                                               :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(in-sys-mode)
+#+END_SRC
+
+
+***** Description
+
+Check if initialization was done in :SYS mode.
+
+
+
+-----
+
+# link target 2: <<initializedp>>
+# link target: <<function initializedp>>
+
+
+**** Function: =initializedp=                                              :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(initializedp)
+#+END_SRC
+
+
+***** Description
+
+Check if the WiringPi library was initialized.
+
+
+
+-----
+
+# link target 2: <<setenv>>
+# link target: <<function setenv>>
+
+
+**** Function: =setenv=                                                    :function:
+
+
+***** Syntax
+
+#+BEGIN_SRC lisp
+(setenv variable value &optional (overwritep t))
+#+END_SRC
+
+
+***** Description
+
+Not documented.
+
+
+
+
+
+
+** Index
+
+ [[index A][A]]  [[index D][D]]  [[index I][I]]  [[index M][M]]  [[index P][P]]
+ [[index S][S]]  [[index NONALPHABETIC][NONALPHABETIC]]  
+
+
+*** Nonalphabetic
+
+
+# link target: <<index NONALPHABETIC>>
+- [[variable *setup-mode*][=cl-wiringpi2::*setup-mode*=]], Variable
+- [[constant ..2b..high..2b..][=cl-wiringpi2-ffi:+high+=]], Constant
+- [[constant ..2b..low..2b..][=cl-wiringpi2-ffi:+low+=]], Constant
+
+
+
+*** A
+
+
+# link target: <<index A>>
+- [[function analog-read][=cl-wiringpi2:analog-read=]], Function
+- [[function analog-write][=cl-wiringpi2:analog-write=]], Function
+
+
+
+*** D
+
+
+# link target: <<index D>>
+- [[function delay][=cl-wiringpi2:delay=]], Function
+- [[function delay-microseconds][=cl-wiringpi2:delay-microseconds=]], Function
+- [[function digital-read][=cl-wiringpi2:digital-read=]], Function
+- [[function digital-write][=cl-wiringpi2:digital-write=]], Function
+
+
+
+*** I
+
+
+# link target: <<index I>>
+- [[function in-sys-mode][=cl-wiringpi2::in-sys-mode=]], Function
+- [[function initializedp][=cl-wiringpi2::initializedp=]], Function
+
+
+
+*** M
+
+
+# link target: <<index M>>
+- [[function microseconds][=cl-wiringpi2:microseconds=]], Function
+- [[function milliseconds][=cl-wiringpi2:milliseconds=]], Function
+
+
+
+*** P
+
+
+# link target: <<index P>>
+- [[function pi-board-info][=cl-wiringpi2:pi-board-info=]], Function
+- [[function pi-board-info*][=cl-wiringpi2:pi-board-info*=]], Function
+- [[function pi-board-revision][=cl-wiringpi2:pi-board-revision=]], Function
+- [[function pin-mode][=cl-wiringpi2:pin-mode=]], Function
+- [[function pin-mode*][=cl-wiringpi2:pin-mode*=]], Function
+- [[function pwm-write][=cl-wiringpi2:pwm-write=]], Function
+
+
+
+*** S
+
+
+# link target: <<index S>>
+- [[function set-pull-resistor-mode][=cl-wiringpi2:set-pull-resistor-mode=]],
+  Function
+- [[function setenv][=cl-wiringpi2::setenv=]], Function
+- [[function setup][=cl-wiringpi2:setup=]], Function
+
+
+
+
+
+* Colophon
+
+This documentation was generated from Common Lisp source code using CLOD, version 1.0.
+The latest version of CLOD is available [[http://bitbucket.org/eeeickythump/clod/][here]].
