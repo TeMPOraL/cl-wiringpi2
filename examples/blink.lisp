@@ -3,7 +3,7 @@
 (defun blink (&optional (n 10))
   "Initialize the Wiring Pi library and blink a LED connected to pin 0 `N' times."
   (setup)
-  (pin-mode 0 :OUTPUT)
+  (setf (pin-mode 0) :output)
   (dotimes (dummy n)
     (digital-write 0 +high+)
     (delay 500)

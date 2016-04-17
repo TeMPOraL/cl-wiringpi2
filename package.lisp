@@ -10,6 +10,7 @@
 
   (:export #:setup
            #:pin-mode
+           #:pin-mode*
            #:set-pull-resistor-mode
            #:digital-write
            #:pwm-write

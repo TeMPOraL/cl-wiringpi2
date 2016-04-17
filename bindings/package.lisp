@@ -13,6 +13,13 @@
    #:+pwm-output+
    #:+gpio-clock+
 
+   #:+alt-0+
+   #:+alt-1+
+   #:+alt-2+
+   #:+alt-3+
+   #:+alt-4+
+   #:+alt-5+
+
    #:+low+
    #:+high+
 
@@ -53,6 +60,8 @@
 
    #:pi-board-rev
    #:wrapped-pi-board-id
+
+   #:get-alt
 
    #:delay
    #:delay-microseconds

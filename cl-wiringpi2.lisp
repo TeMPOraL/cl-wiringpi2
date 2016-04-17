@@ -46,7 +46,24 @@ the process to terminate if setup function fails."
              (wpi2-ffi:wiring-pi-setup-sys)))
         (setf *setup-mode* mode))))
 
-(defun pin-mode (pin mode)
+(defun pin-mode (pin)
+  "Try to get the mode `PIN' is in.
+Returns either :INPUT or :OUTPUT for valid I/O modes,
+or :ALT-0 - :ALT-5 for 6 different 'alternate functions'.
+
+See also `(SETF PIN-MODE)', `PIN-MODE*'."
+  (let ((mode (wpi2-ffi:get-alt pin)))
+    (ecase mode
+      (wpi2-ffi:+input+ :INPUT)
+      (wpi2-ffi:+output+ :OUTPUT)
+      (wpi2-ffi:+alt-0+ :ALT-0)
+      (wpi2-ffi:+alt-1+ :ALT-1)
+      (wpi2-ffi:+alt-2+ :ALT-2)
+      (wpi2-ffi:+alt-3+ :ALT-3)
+      (wpi2-ffi:+alt-4+ :ALT-4)
+      (wpi2-ffi:+alt-5+ :ALT-5))))
+
+(defun (setf pin-mode) (mode pin)
   "Try to set `PIN' to `MODE'.
 Available modes are:
   - :INPUT
@@ -61,6 +78,10 @@ This function has no effect in :SYS mode."
                    (:PWM-OUTPUT wpi2-ffi:+pwm-output+)
                    (:GPIO-CLOCK wpi2-ffi:+gpio-clock+))))
     (wpi2-ffi:pin-mode pin mode-id)))
+
+(defun pin-mode* (pin)
+  "Returns the raw bits of `PIN' mode as an integer."
+  (wpi2-ffi:get-alt pin))
 
 (defun set-pull-resistor-mode (pin mode)
   "Set the mode of pull-up / pull-down resistors on the `PIN'.

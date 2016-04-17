@@ -25,6 +25,14 @@
 (define-constant +soft-tone-output+ 5)
 (define-constant +pwm-tone-output+ 6)
 
+;;; Additional constants not found in the wiringPi.h but relevant to the getAlt() function.
+(define-constant +alt-0+ 4)
+(define-constant +alt-1+ 5)
+(define-constant +alt-2+ 6)
+(define-constant +alt-3+ 7)
+(define-constant +alt-4+ 3)
+(define-constant +alt-5+ 2)
+
 (define-constant +low+ 0)
 (define-constant +high+ 1)
 
